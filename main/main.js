@@ -17,12 +17,12 @@ const createWindow = () => {
       alwaysOnTop: true 
     });
 
-    splash.loadFile('./renderer/splash.html');
+    splash.loadFile('./renderer/views/splash.html');
     splash.center();
     
     setTimeout(function () {
       splash.close();
-      win.loadFile('./renderer/index.html')
+      win.loadFile('./renderer/views/index.html')
       win.setMenuBarVisibility(false);
       win.show();
     }, 2000);
