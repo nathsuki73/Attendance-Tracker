@@ -132,11 +132,8 @@ button:hover {
 }
 
 #continue {
+  color: #000;
   display: block;
   margin: 10px auto 10px;
-  background: #28a745;
-}
-
-#continue:hover {
-  background: #218838;
+  background: #ffffff;
 }
