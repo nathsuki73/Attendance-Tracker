@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="../styles/auth.css" />
   </head>
   <body>
-    <div class="login-box">
+    <div class="auth-box">
       <div class="logo-container">
         <img src="../resource/logo.svg" alt="logo" id="logo" />
       </div>
@@ -20,16 +21,20 @@
           <label for="password">Password</label>
           <input type="password" id="password" required />
         </div>
-        <button type="submit">Log in</button>
+        <div></div>
       </form>
+      <div class="button-container">
+        <button type="submit" class="custom-btn button">Log in</button>
+        <button id="continue" class="custom-btn button">
+          Continue without logging in
+        </button>
+      </div>
       <div class="links">
         <a href="#forgot-password" id="forgot-password">Forgot Password?</a>
         <a href="./signup.html" id="sign-up">Sign up</a>
       </div>
     </div>
-    <div>
-      <button id="continue">Continue while offline</button>
-    </div>
+
     <script src="../scripts/login.js"></script>
   </body>
 </html>
