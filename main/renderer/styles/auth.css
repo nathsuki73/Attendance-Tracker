@@ -6,6 +6,11 @@
   font-style: normal;
 }
 
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
   font-family: "mplus-rounded", sans-serif;
   display: flex;
@@ -27,7 +32,7 @@ body {
 }
 
 .logo-container {
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -41,7 +46,7 @@ h2 {
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .input-group label {
@@ -55,6 +60,83 @@ h2 {
   padding: 10px;
   border: 2px solid #d4d4d4;
   box-sizing: border-box;
+  transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.input-group input:focus {
+  border-color: #212121;
+  box-shadow: 0 0 8px 0 rgba(43, 43, 43, 0.8);
+  outline: none; /* Remove default outline */
+}
+
+.grid-container {
+  display: grid;
+  place-items: end; /* Center SVG within grid container */
+  height: 15px; /* Adjust height as needed */
+  width: 100%; /* Adjust width as needed */
+}
+
+.checkbox {
+  --background: #fff;
+  --border: #d1d6ee;
+  --border-hover: #bbc1e1;
+  --border-active: #1e2235;
+  --tick: #fff;
+
+  display: flex;
+  align-items: center;
+  input,
+  svg {
+    width: 21px;
+    height: 21px;
+  }
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--background);
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+    box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+    &:hover {
+      --s: 2px;
+      --b: var(--border-hover);
+    }
+    &:checked {
+      --b: var(--border-active);
+    }
+  }
+  svg {
+    pointer-events: none;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--stroke, var(--border-active));
+    position: absolute;
+    margin-left: 4px;
+    width: 21px;
+    height: 21px;
+  }
+  &.path {
+    input {
+      &:checked {
+        --s: 2px;
+        transition-delay: 0.4s;
+        & + svg {
+          --a: 16.1 86.12;
+          --o: 102.22;
+        }
+      }
+    }
+    svg {
+      stroke-dasharray: var(--a, 86.12);
+      stroke-dashoffset: var(--o, 86.12);
+      transition: stroke-dasharray 0.6s, stroke-dashoffset 0.6s;
+    }
+  }
 }
 
 input:hover {
