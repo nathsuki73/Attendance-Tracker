@@ -21,3 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "index.html";
   });
 });
+
+function togglePasswords() {
+  const password = document.getElementById("password");
+  const confirmPassword = document.getElementById("confirm-password");
+  const type = password.type === "password" ? "text" : "password";
+  password.type = type;
+  confirmPassword.type = type;
+}
