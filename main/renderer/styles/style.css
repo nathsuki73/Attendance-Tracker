@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: transparent;
+  height: 30px;
+  position: relative;
+}
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo-container img {
+  width: 35px;
+  height: 35px;
+}
+.profile-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.profile-btn img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.profile-btn:hover img {
+  background-color: #9b9b9b;
+}

@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Attendance Tracker</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div class="navbar">
+      <div class="spacer"></div>
+      <div class="logo-container">
+        <img src="../resource/logo.svg" alt="logo" id="logo" />
+      </div>
+      <button class="profile-btn">
+        <img src="../resource/profile.svg" alt="profile" id="profile" />
+      </button>
+    </div>
   </body>
 </html>
