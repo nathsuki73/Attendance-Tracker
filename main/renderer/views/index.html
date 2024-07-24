@@ -28,19 +28,29 @@
     <!-- Modal Dialog -->
     <div id="nameModal" class="modal">
       <div class="modal-content">
-        <div class="modal-button">
-          <button id="close-button">
-            <img src="../resource/close.svg" alt="close" id="close" />
-          </button>
+        <button id="close-button">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            id="close"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10.9392 12L6.96948 15.9697L8.03014 17.0304L11.9999 13.0607L15.9696 17.0304L17.0303 15.9697L13.0606 12L17.0302 8.03039L15.9695 6.96973L11.9999 10.9393L8.03026 6.96973L6.9696 8.03039L10.9392 12Z"
+              fill="currentColor"
+              stroke="currentColor"
+            />
+          </svg>
+        </button>
+        <div class="container">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter group name" />
+          <button class="custom-modal-button modal-button">Create</button>
         </div>
-        <div class="input-group">
-          <input
-            type="text"
-            id="buttonName"
-            placeholder="Enter group name here"
-          />
-        </div>
-        <button id="addButton" class="custom-btn">Add Button</button>
       </div>
     </div>
     <script src="../scripts/index.js"></script>
