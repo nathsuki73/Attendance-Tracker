@@ -4,12 +4,12 @@ document.getElementById("button-add").addEventListener("click", function () {
   document.getElementById("nameModal").style.display = "flex";
 });
 
-document.getElementById("closeModal").addEventListener("click", function () {
+document.getElementById("close-button").addEventListener("click", function () {
   document.getElementById("nameModal").style.display = "none";
 });
 
-document.getElementById("addButton").addEventListener("click", function () {
-  const buttonName = document.getElementById("buttonName").value.trim();
+document.getElementById("createButton").addEventListener("click", function () {
+  const buttonName = document.getElementById("name").value.trim();
   if (buttonName) {
     buttonCount++;
     const newButton = document.createElement("button");
@@ -25,5 +25,19 @@ document.getElementById("addButton").addEventListener("click", function () {
     document.getElementById("buttonName").value = "";
   } else {
     alert("Please enter a button name.");
+  }
+});
+
+// Close modal when clicking outside of it
+document.addEventListener("click", function (event) {
+  const modal = document.getElementById("nameModal");
+  const modalContent = document.querySelector(".modal-content");
+
+  if (
+    modal.style.display === "flex" &&
+    !modalContent.contains(event.target) &&
+    !event.target.matches("#button-add")
+  ) {
+    modal.style.display = "none";
   }
 });
