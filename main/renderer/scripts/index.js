@@ -22,7 +22,7 @@ document.getElementById("createButton").addEventListener("click", function () {
 
     // Hide modal and clear input
     document.getElementById("nameModal").style.display = "none";
-    document.getElementById("buttonName").value = "";
+    document.getElementById("name").value = "";
   } else {
     alert("Please enter a button name.");
   }
